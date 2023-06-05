@@ -1,0 +1,427 @@
+// Formal Industries
+$jet: rgba(43, 45, 47, 1);
+$royal-purple: rgba(106, 86, 142, 1);
+$dark-cornflower-blue: rgba(48, 68, 107, 1);
+$egyptian-blue: rgba(33, 56, 153, 1);
+$slate-gray: rgba(111, 127, 144, 1);
+$blue-gray: rgba(127, 154, 200, 1);
+$blue-green: rgba(83, 157, 187, 1);
+$viridian-green: rgba(88, 141, 145, 1);
+$opal: rgba(184, 208, 201, 1);
+$dark-sea-green: rgba(150, 172, 137, 1);
+$fern-green: rgba(105, 122, 72, 1);
+$castleton-green: rgba(35, 86, 67, 1);
+$bronze: rgba(195, 135, 76, 1);
+$kobe: rgba(114, 56, 30, 1);
+$up-maroon: rgba(109, 24, 21, 1);
+
+@font-face
+{
+    font-family: 'roboto-regular';
+    font-weight: normal;
+    font-style: normal;
+
+    src: url('../fonts/roboto/roboto-regular-webfont.woff2') format('woff2'),
+    url('../fonts/roboto/roboto-regular-webfont.woff')  format('woff'),
+    url('../fonts/roboto/roboto-regular-webfont.ttf')   format('truetype'),
+    url('../fonts/roboto/roboto-regular-webfont.svg#roboto-regular') format('svg');
+}
+
+html
+{
+    font-family: 'roboto-regular';
+
+    box-sizing: border-box;
+    width: 8.5in;
+    height: 11in;
+    margin: 0 auto;
+    padding: .25in;
+
+    color: #444;
+    background-color: white;
+}
+
+body
+{
+    color: $jet;
+    border-width: 3px;
+    border-style: solid;
+    border-color: lighten($dark-cornflower-blue, 17%);
+    box-shadow: 0 3px 6px 2px lighten($dark-cornflower-blue, 40%);
+}
+
+body::before
+{
+    position: absolute;
+    top: 13px;
+    right: 34px;
+
+    display: none;  // block
+
+    padding: 2px;
+
+    content: 'width x height';
+
+    border: inset 1px black;
+    border-radius: 3px;
+    background-color: white;
+}
+
+h1
+{
+    font-size: 1.7em;
+
+    margin-top: 6px;
+    margin-bottom: 6px;
+
+    color: $dark-cornflower-blue;
+}
+
+header
+{
+    display: block;
+
+    padding-right: 12px;
+    padding-left: 14px;
+
+    text-align: left;
+
+    border-bottom: 3px solid lighten($dark-cornflower-blue, 17%);
+
+    #left,
+    #right
+    {
+        display: inline-block;
+    }
+
+    #left
+    {
+        width: 50%;
+
+        #name,
+        #title
+        {
+            display: block;
+
+            margin: 0 auto;
+        }
+
+        #name
+        {
+            font-size: 54px;
+        }
+
+        #title
+        {
+            font-size: 23px;
+
+            padding-top: 0;
+            padding-bottom: 10px;
+            padding-left: 1px;
+            // color: rgba(0,0,0, .6);
+
+            color: darken($blue-gray, 22%);
+        }
+    }
+
+    #right
+    {
+        font-size: 13px;
+
+        width: 49%;
+
+        ol
+        {
+            list-style: none;
+
+            text-align: end;
+
+            color: $dark-cornflower-blue;
+
+            li
+            {
+                padding-bottom: 4px;
+            }
+        }
+    }
+}
+
+main
+{
+    display: block;
+
+    height: 827px;
+    margin: 0 auto;
+
+    #left,
+    #right
+    {
+        display: inline-block;
+
+        height: 100%;
+    }
+
+    #left
+    {
+        width: 30%;
+
+        vertical-align: top;
+
+        color: darken($dark-cornflower-blue, 5%);
+        border-right: 3px solid lighten($dark-cornflower-blue, 17%);
+        background-color: lighten($blue-gray, 25%);
+
+        h1
+        {
+            margin-left: 6px;
+            padding-bottom: 4px;
+
+            border-width: 1px;
+            border-style: solid;
+            border-top: 0;
+            border-right: 0;
+            border-left: 0;
+            border-image-source: linear-gradient(to left, $dark-cornflower-blue, rgba(0, 0, 0, 0));
+            border-image-slice: 1;
+        }
+
+        h2
+        {
+            font-size: 1.15em;
+
+            margin-top: 0;
+            margin-bottom: 0;
+            margin-left: 6px;
+            padding-right: 10px;
+            padding-bottom: 4px;
+
+            color: $dark-cornflower-blue;
+
+            span
+            {
+                vertical-align: bottom;
+            }
+        }
+
+        ol
+        {
+            margin-top: 14px;
+            margin-bottom: 0;
+            padding-right: 10px;
+
+            list-style: none;
+
+            padding-inline-start: 0;
+
+            li
+            {
+                font-size: 13px;
+
+                padding-bottom: 8px;
+
+                &:last-child
+                {
+                    padding-bottom: 0;
+                }
+            }
+        }
+
+        #contact,
+        #education,
+        #skills,
+        #projects
+        {
+            margin-right: 12px;
+            padding-bottom: 8px;
+
+            text-align: right;
+        }
+
+        #skills > ol
+        {
+            margin-top: 6px;
+            margin-bottom: 6px;
+        }
+    }
+
+    #right
+    {
+        width: 68%;
+
+        h1
+        {
+            margin-left: 6px;
+            padding-bottom: 4px;
+
+            border-width: 1px;
+            border-style: solid;
+            border-top: 0;
+            border-right: 0;
+            border-left: 0;
+            border-image-source: linear-gradient(to right, $dark-cornflower-blue, rgba(0, 0, 0, 0));
+            border-image-slice: 1;
+        }
+
+        .job
+        {
+            font-size: 15px;
+
+            padding: 10px;
+            padding-top: 8px;
+            padding-bottom: 0;
+
+            color: darken($dark-cornflower-blue, 5%);
+
+            .details
+            {
+                padding-bottom: 4px;
+
+                .left,
+                .right
+                {
+                    display: inline-block;
+
+                    div:first-child
+                    {
+                        padding-bottom: 8px;
+                    }
+                }
+
+                .left
+                {
+                    width: 50%;
+
+                    text-align: initial;
+                }
+
+                .right
+                {
+                    width: 49%;
+
+                    text-align: end;
+                }
+            }
+
+            ul
+            {
+                font-size: 14px;
+
+                margin-top: 6px;
+                margin-bottom: 0;
+
+                padding-inline-start: 6px;
+
+                li
+                {
+                    line-height: 1.5rem;
+
+                    display: inline-flex;
+
+                    padding-bottom: 6px;
+
+                    list-style: none;
+
+                    text-align: justify;
+
+                    &:last-child
+                    {
+                        padding-bottom: 8px;
+
+                        border-width: 1px;
+                        border-style: solid;
+                        border-top: 0;
+                        border-right: 0;
+                        border-left: 0;
+                        border-image-source: linear-gradient(to left, $dark-cornflower-blue, rgba(0, 0, 0, 0));
+                        border-image-slice: 1;
+                    }
+
+                    &::before
+                    {
+                        position: relative;
+                        top: 2px;
+                        left: -3px;
+
+                        display: inline-block;
+
+                        content: url(../images/icons/caret-right.svg);
+                    }
+                }
+            }
+
+            &:last-child
+            {
+                ul > li:last-child
+                {
+                    border-width: 0;
+                }
+            }
+        }
+    }
+}
+
+footer
+{
+    font-size: 14px;
+
+    height: 20px;
+    padding: 17px;
+
+    border-top: 3px solid lighten($dark-cornflower-blue, 17%);
+
+    span
+    {
+        display: inline-block;
+
+        width: 33%;
+
+        &:nth-child(1)
+        {
+            text-align: left;
+        }
+
+        &:nth-child(2)
+        {
+            text-align: center;
+        }
+
+        &:nth-child(3)
+        {
+            text-align: right;
+        }
+    }
+}
+
+@media print
+{
+    @page
+    {
+        margin: 0;
+    }
+
+    html
+    {
+        width: 8.5in;
+        height: 11in;
+    }
+
+    body
+    {
+        margin: 0;
+
+        box-shadow: none;
+    }
+
+    .icon
+    {
+        // z-index: 5;
+
+        display: inline-block;
+
+        width: 16px;
+        height: 16px;
+        margin-left: 2px;
+
+        visibility: visible;
+    }
+}

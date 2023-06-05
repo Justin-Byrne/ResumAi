@@ -1,0 +1,222 @@
+@font-face {
+  font-family: 'roboto-regular';
+  font-weight: normal;
+  font-style: normal;
+  src: url("../fonts/roboto/roboto-regular-webfont.woff2") format("woff2"), url("../fonts/roboto/roboto-regular-webfont.woff") format("woff"), url("../fonts/roboto/roboto-regular-webfont.ttf") format("truetype"), url("../fonts/roboto/roboto-regular-webfont.svg#roboto-regular") format("svg"); }
+html {
+  font-family: 'roboto-regular';
+  box-sizing: border-box;
+  width: 8.5in;
+  height: 11in;
+  margin: 0 auto;
+  padding: .25in;
+  color: #444;
+  background-color: white; }
+
+body {
+  color: #2b2d2f;
+  border-width: 3px;
+  border-style: solid;
+  border-color: #4b6aa7;
+  box-shadow: 0 3px 6px 2px #97aad0; }
+
+body::before {
+  position: absolute;
+  top: 13px;
+  right: 34px;
+  display: none;
+  padding: 2px;
+  content: 'width x height';
+  border: inset 1px black;
+  border-radius: 3px;
+  background-color: white; }
+
+h1 {
+  font-size: 1.7em;
+  margin-top: 6px;
+  margin-bottom: 6px;
+  color: #30446b; }
+
+header {
+  display: block;
+  padding-right: 12px;
+  padding-left: 14px;
+  text-align: left;
+  border-bottom: 3px solid #4b6aa7; }
+  header #left,
+  header #right {
+    display: inline-block; }
+  header #left {
+    width: 50%; }
+    header #left #name,
+    header #left #title {
+      display: block;
+      margin: 0 auto; }
+    header #left #name {
+      font-size: 54px; }
+    header #left #title {
+      font-size: 23px;
+      padding-top: 0;
+      padding-bottom: 10px;
+      padding-left: 1px;
+      color: #416096; }
+  header #right {
+    font-size: 13px;
+    width: 49%; }
+    header #right ol {
+      list-style: none;
+      text-align: end;
+      color: #30446b; }
+      header #right ol li {
+        padding-bottom: 4px; }
+
+main {
+  display: block;
+  height: 827px;
+  margin: 0 auto; }
+  main #left,
+  main #right {
+    display: inline-block;
+    height: 100%; }
+  main #left {
+    width: 30%;
+    vertical-align: top;
+    color: #283959;
+    border-right: 3px solid #4b6aa7;
+    background-color: #d8e0ee; }
+    main #left h1 {
+      margin-left: 6px;
+      padding-bottom: 4px;
+      border-width: 1px;
+      border-style: solid;
+      border-top: 0;
+      border-right: 0;
+      border-left: 0;
+      border-image-source: linear-gradient(to left, #30446b, rgba(0, 0, 0, 0));
+      border-image-slice: 1; }
+    main #left h2 {
+      font-size: 1.15em;
+      margin-top: 0;
+      margin-bottom: 0;
+      margin-left: 6px;
+      padding-right: 10px;
+      padding-bottom: 4px;
+      color: #30446b; }
+      main #left h2 span {
+        vertical-align: bottom; }
+    main #left ol {
+      margin-top: 14px;
+      margin-bottom: 0;
+      padding-right: 10px;
+      list-style: none;
+      padding-inline-start: 0; }
+      main #left ol li {
+        font-size: 13px;
+        padding-bottom: 8px; }
+        main #left ol li:last-child {
+          padding-bottom: 0; }
+    main #left #contact,
+    main #left #education,
+    main #left #skills,
+    main #left #projects {
+      margin-right: 12px;
+      padding-bottom: 8px;
+      text-align: right; }
+    main #left #skills > ol {
+      margin-top: 6px;
+      margin-bottom: 6px; }
+  main #right {
+    width: 68%; }
+    main #right h1 {
+      margin-left: 6px;
+      padding-bottom: 4px;
+      border-width: 1px;
+      border-style: solid;
+      border-top: 0;
+      border-right: 0;
+      border-left: 0;
+      border-image-source: linear-gradient(to right, #30446b, rgba(0, 0, 0, 0));
+      border-image-slice: 1; }
+    main #right .job {
+      font-size: 15px;
+      padding: 10px;
+      padding-top: 8px;
+      padding-bottom: 0;
+      color: #283959; }
+      main #right .job .details {
+        padding-bottom: 4px; }
+        main #right .job .details .left,
+        main #right .job .details .right {
+          display: inline-block; }
+          main #right .job .details .left div:first-child,
+          main #right .job .details .right div:first-child {
+            padding-bottom: 8px; }
+        main #right .job .details .left {
+          width: 50%;
+          text-align: initial; }
+        main #right .job .details .right {
+          width: 49%;
+          text-align: end; }
+      main #right .job ul {
+        font-size: 14px;
+        margin-top: 6px;
+        margin-bottom: 0;
+        padding-inline-start: 6px; }
+        main #right .job ul li {
+          line-height: 1.5rem;
+          display: inline-flex;
+          padding-bottom: 6px;
+          list-style: none;
+          text-align: justify; }
+          main #right .job ul li:last-child {
+            padding-bottom: 8px;
+            border-width: 1px;
+            border-style: solid;
+            border-top: 0;
+            border-right: 0;
+            border-left: 0;
+            border-image-source: linear-gradient(to left, #30446b, rgba(0, 0, 0, 0));
+            border-image-slice: 1; }
+          main #right .job ul li::before {
+            position: relative;
+            top: 2px;
+            left: -3px;
+            display: inline-block;
+            content: url(../images/icons/caret-right.svg); }
+      main #right .job:last-child ul > li:last-child {
+        border-width: 0; }
+
+footer {
+  font-size: 14px;
+  height: 20px;
+  padding: 17px;
+  border-top: 3px solid #4b6aa7; }
+  footer span {
+    display: inline-block;
+    width: 33%; }
+    footer span:nth-child(1) {
+      text-align: left; }
+    footer span:nth-child(2) {
+      text-align: center; }
+    footer span:nth-child(3) {
+      text-align: right; }
+
+@media print {
+  @page {
+    margin: 0; }
+  html {
+    width: 8.5in;
+    height: 11in; }
+
+  body {
+    margin: 0;
+    box-shadow: none; }
+
+  .icon {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-left: 2px;
+    visibility: visible; } }
+
+/*# sourceMappingURL=main.css.map */
